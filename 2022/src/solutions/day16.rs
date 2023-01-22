@@ -1,3 +1,4 @@
+#![allow(dead_code, unused_variables)]
 use common::regex::Regex;
 use std::{cell::LazyCell, collections::HashMap, error::Error, str::FromStr};
 

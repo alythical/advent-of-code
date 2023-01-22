@@ -5,21 +5,19 @@
   };
 
   outputs = { self, nixpkgs, rust-overlay }: {
-    defaultPackage.x86_64-darwin =
+    devShells.x86_64-linux.default =
       let
         overlays = [ (import rust-overlay) ];
         pkgs = import nixpkgs {
           inherit overlays;
-          system = "x86_64-darwin";
+          system = "x86_64-linux";
         };
         rust-nightly = pkgs.rust-bin.selectLatestNightlyWith (toolchain: toolchain.default.override {
           extensions = [ "rust-src" ];
         });
       in
       with pkgs;
-      stdenv.mkDerivation {
-        name = "advent-of-code";
-        src = self;
+      pkgs.mkShell {
         buildInputs = [ rust-nightly python310 ];
       };
   };

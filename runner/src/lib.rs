@@ -1,4 +1,4 @@
-pub use catppuccin::MOCHA;
+pub use catppuccin;
 pub use tabled::{format::Format, object::Columns, Modify, Style, Tabled};
 
 #[derive(Tabled)]
@@ -13,7 +13,7 @@ pub struct SolveData {
 macro_rules! table {
     ($year:ident, {$($module:ident),*}) => {{
         use $year::solutions::*;
-        use $crate::SolveData;
+        use $crate::{catppuccin::Flavour, SolveData};
 
         let mut data: Vec<SolveData> = vec![];
         $(
@@ -24,9 +24,9 @@ macro_rules! table {
         let mut table = tabled::Table::new(data);
         table
             .with($crate::Style::rounded())
-            .with($crate::Modify::new($crate::Columns::single(0)).with($crate::Format::new(|s| $crate::MOCHA.red.ansi_paint(s).to_string())))
-            .with($crate::Modify::new($crate::Columns::new(1..=2)).with($crate::Format::new(|s| $crate::MOCHA.green.ansi_paint(s).to_string())))
-            .with($crate::Modify::new($crate::Columns::new(3..)).with($crate::Format::new(|s| $crate::MOCHA.yellow.ansi_paint(s).to_string())));
+            .with($crate::Modify::new($crate::Columns::single(0)).with($crate::Format::new(|s| Flavour::Mocha.red().ansi_paint(s).to_string())))
+            .with($crate::Modify::new($crate::Columns::new(1..=2)).with($crate::Format::new(|s| Flavour::Mocha.green().ansi_paint(s).to_string())))
+            .with($crate::Modify::new($crate::Columns::new(3..)).with($crate::Format::new(|s| Flavour::Mocha.yellow().ansi_paint(s).to_string())));
         table
     }};
 }
