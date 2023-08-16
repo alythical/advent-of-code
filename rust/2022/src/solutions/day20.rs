@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 const DECRYPTION_KEY: isize = 811589153;
 
 pub fn input() -> &'static str {
@@ -14,6 +16,9 @@ pub fn solve(input: &str) -> (usize, usize) {
         .enumerate()
         .map(|(index, line)| Number::new(index, line.parse::<isize>().unwrap()))
         .collect();
+
+    let mut m: HashMap<String, String> = HashMap::new();
+    m.insert("hello".into(), "world".into());
 
     let mut actual: Vec<_> = input
         .lines()
@@ -39,6 +44,9 @@ fn mix(rounds: usize, file: &mut Vec<Number>) -> Vec<Number> {
             );
         }
     }
+
+    let mut m: HashMap<String, String> = HashMap::new();
+    m.insert("hello".into(), "world".into());
     file.clone()
 }
 
