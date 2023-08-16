@@ -2,7 +2,6 @@ enum class Shape(val score: Int) {
     Rock(1),
     Paper(2),
     Scissors(3),
-    Unknown(4)
 }
 
 object Day2 {
@@ -17,7 +16,7 @@ object Day2 {
                             "A", "X" -> Shape.Rock
                             "B", "Y" -> Shape.Paper
                             "C", "Z" -> Shape.Scissors
-                            else -> Shape.Unknown
+                            else -> TODO("this should never happen")
                         }
                     }
             }
@@ -54,7 +53,6 @@ object Day2 {
                 Shape.Scissors -> choices[opponent.score % 3] + 6
                 Shape.Paper -> 3 + opponent.score
                 Shape.Rock -> choices[(opponent.score + 1) % 3]
-                Shape.Unknown -> 0
             }
         }
     }
