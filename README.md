@@ -4,6 +4,7 @@ My solutions for [Advent of Code](https://adventofcode.com/about), an Advent cal
 
 ## ✨ 2022 ✨
 
+### Rust
 [22-1]: rust/2022/src/solutions/day01.rs
 [22-2]: rust/2022/src/solutions/day02.rs
 [22-3]: rust/2022/src/solutions/day03.rs
@@ -32,6 +33,19 @@ My solutions for [Advent of Code](https://adventofcode.com/about), an Advent cal
 ¹ Solved only P1
 
 ² Assistance for P2
+
+### Kotlin
+[22-1-Kotlin]: kotlin/src/main/kotlin/Day1.kt
+[22-2-Kotlin]: kotlin/src/main/kotlin/Day2.kt
+[22-3-Kotlin]: kotlin/src/main/kotlin/Day3.kt
+[22-4-Kotlin]: kotlin/src/main/kotlin/Day4.kt
+
+|          |          |          |          |          |          |          |
+| -------: | -------: | -------: | -------: | -------: | -------: | -------: |
+|          |          |          | **[1][22-1-Kotlin]** | **[2][22-2-Kotlin]** | **[3][22-3-Kotlin]** | **[4][22-4-Kotlin]** |
+| ~~5~~ | ~~6~~ | ~~7~~ | ~~8~~ | ~~9~~ | ~~10~~ | ~~11~~ |
+| ~~12~~ | ~~13~~ | ~~14~~ | ~~15~~ | ~~16~~ | ~~17~~ | ~~18~~ |
+| ~~19~~ | ~~20~~ | ~~21~~ | ~~22~~ | ~~23~~ | ~~24~~ | ~~25~~ |
 
 ## ✨ 2021 ✨
 
