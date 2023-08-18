@@ -1,5 +1,5 @@
 class InputLoader {
-    private val loader: ClassLoader = Thread.currentThread().contextClassLoader
+    private val loader = Thread.currentThread().contextClassLoader
 
     fun getExample(year: Int, day: Int): String {
         return this.loader.getResource("$year/examples/day$day.txt")!!.readText()

@@ -2,7 +2,7 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
 class Day4Test {
-    private val loader: InputLoader = InputLoader()
+    private val loader = InputLoader()
 
     @Test
     fun example() {
