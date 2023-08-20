@@ -34,7 +34,9 @@ object Day5 {
             val from = stacks[instr.from - 1]
             val to = stacks[instr.to - 1]
             val moving = from.subList(0, instr.count).toList().let {
-                if (partTwo) { it.reversed() } else it
+                if (partTwo) {
+                    it.reversed()
+                } else it
             }
             for (char in moving) {
                 to.add(0, char)
