@@ -33,8 +33,9 @@ object Day5 {
         for (instr in instrs) {
             val from = stacks[instr.from - 1]
             val to = stacks[instr.to - 1]
-            var moving = from.subList(0, instr.count).toList() // create a duplicate
-            moving = if (partTwo) { moving.reversed() } else { moving }
+            val moving = from.subList(0, instr.count).toList().let {
+                if (partTwo) { it.reversed() } else it
+            }
             for (char in moving) {
                 to.add(0, char)
                 from.removeAt(0)
