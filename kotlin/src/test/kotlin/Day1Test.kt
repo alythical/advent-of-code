@@ -7,12 +7,12 @@ class Day1Test {
     @Test
     fun example() {
         val result = Day1.solve(this.loader.getExample(2022, 1))
-        assertEquals(result, Pair(24000, 45000))
+        assertEquals(Pair(24000, 45000), result)
     }
 
     @Test
     fun actual() {
         val result = Day1.solve(this.loader.get(2022, 1))
-        assertEquals(result, Pair(69836, 207968))
+        assertEquals(Pair(69836, 207968), result)
     }
 }
