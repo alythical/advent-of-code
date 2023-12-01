@@ -1,3 +1,5 @@
+#![allow(clippy::crate_in_macro_def)] // intentional
+
 #[macro_export]
 macro_rules! test {
     ($module:ident, $test_output:expr, $output:expr) => {
