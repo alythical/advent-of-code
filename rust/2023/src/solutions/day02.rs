@@ -56,7 +56,7 @@ impl Round {
 }
 
 pub fn solve(input: &str) -> (usize, usize) {
-    let possible: usize = input
+    let possible = input
         .lines()
         .map(Game::from_str)
         .filter_map(|game| {
