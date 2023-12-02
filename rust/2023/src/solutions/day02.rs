@@ -38,23 +38,19 @@ struct Round {
 
 impl Round {
     fn from_str(round: &str) -> Round {
-        let (red, green, blue) =
-            round
-                .split(',')
-                .map(|x| x.trim())
-                .fold((0, 0, 0), |acc, color| {
-                    let (n, color) = color
-                        .trim()
-                        .split_once(' ')
-                        .map(|(n, color)| (n.parse::<usize>().unwrap(), color))
-                        .unwrap();
-                    match color {
-                        "red" => (n, acc.1, acc.2),
-                        "green" => (acc.0, n, acc.2),
-                        "blue" => (acc.0, acc.1, n),
-                        _ => unreachable!(),
-                    }
-                });
+        let (red, green, blue) = round.split(',').fold((0, 0, 0), |acc, color| {
+            let (n, color) = color
+                .trim()
+                .split_once(' ')
+                .map(|(n, color)| (n.parse::<usize>().unwrap(), color))
+                .unwrap();
+            match color {
+                "red" => (n, acc.1, acc.2),
+                "green" => (acc.0, n, acc.2),
+                "blue" => (acc.0, acc.1, n),
+                _ => unreachable!(),
+            }
+        });
         Round { red, green, blue }
     }
 }
