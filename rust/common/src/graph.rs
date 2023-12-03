@@ -49,7 +49,7 @@ impl Graph {
     /// Creates an adjacency list for a graph representation
     /// of a grid, using the function f to calculate the weight
     /// of each edge.
-    pub fn new<F>(grid: &Vec<Vec<usize>>, f: F) -> Self
+    pub fn new<F>(grid: &[Vec<usize>], f: F) -> Self
     where
         F: Fn(usize, usize) -> usize,
     {
