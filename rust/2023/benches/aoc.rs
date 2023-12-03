@@ -1,1 +1,1 @@
-common::benchmark!(twenty_three, { day01, day02 });
+common::benchmark!(twenty_three, { day01, day02, day03 });

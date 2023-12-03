@@ -1,3 +1,3 @@
 fn main() {
-    println!("{}", runner::table!(twenty_three, { day01, day02 }))
+    println!("{}", runner::table!(twenty_three, { day01, day02, day03 }))
 }
