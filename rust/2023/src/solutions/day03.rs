@@ -53,7 +53,8 @@ impl Item {
 
 #[derive(Debug)]
 struct Schematic<'a> {
-    items: Vec<Item>,
+    parts: Vec<Item>,
+    symbols: Vec<Item>,
     dimensions: (usize, usize),
     lines: Vec<&'a str>,
     row: usize,
@@ -66,7 +67,8 @@ impl<'a> Schematic<'a> {
         let lines: Vec<_> = input.lines().collect();
         let mut schematic = Self {
             dimensions: (lines.first().unwrap().len(), lines.len()),
-            items: vec![],
+            parts: vec![],
+            symbols: vec![],
             row: 0,
             from: 0,
             to: 0,
@@ -76,11 +78,11 @@ impl<'a> Schematic<'a> {
             match schematic.peek() {
                 Some(Some('0'..='9')) => {
                     let n = schematic.num();
-                    schematic.items.push(Item::number(&schematic, n));
+                    schematic.parts.push(Item::number(&schematic, n));
                 }
                 Some(Some('.')) => schematic.to += 1,
                 Some(Some(c)) => {
-                    schematic.items.push(Item::symbol(&schematic, c));
+                    schematic.symbols.push(Item::symbol(&schematic, c));
                     schematic.to += 1;
                 }
                 Some(None) => schematic.newline(),
@@ -124,9 +126,8 @@ pub fn solve(input: &str) -> (usize, usize) {
 
 fn part_sum(schematic: &Schematic<'_>) -> usize {
     schematic
-        .items
+        .parts
         .iter()
-        .filter(|item| matches!(item.kind, ItemKind::Number(_)))
         .filter(|part| {
             common::grid::neighbors(schematic.dimensions, (part.from, part.row), true)
                 .into_iter()
@@ -137,9 +138,8 @@ fn part_sum(schematic: &Schematic<'_>) -> usize {
                 ))
                 .any(|(col, row)| {
                     schematic
-                        .items
+                        .symbols
                         .iter()
-                        .filter(|part| matches!(part.kind, ItemKind::Symbol(_)))
                         .any(|part| part.from == col && part.row == row)
                 })
         })
@@ -149,7 +149,7 @@ fn part_sum(schematic: &Schematic<'_>) -> usize {
 
 fn gear_ratio_sum(schematic: &Schematic<'_>) -> usize {
     schematic
-        .items
+        .symbols
         .iter()
         .filter(|item| matches!(item.kind, ItemKind::Symbol('*')))
         .filter_map(|gear| {
@@ -158,9 +158,8 @@ fn gear_ratio_sum(schematic: &Schematic<'_>) -> usize {
                     .into_iter()
                     .filter_map(|(col, row)| {
                         schematic
-                            .items
+                            .parts
                             .iter()
-                            .filter(|part| matches!(part.kind, ItemKind::Number(_)))
                             .find(|part| (part.from == col || part.to == col) && part.row == row)
                     })
                     .collect();
