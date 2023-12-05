@@ -51,16 +51,30 @@ My solutions for [Advent of Code](https://adventofcode.com/about), an Advent cal
 ² Assistance for P2
 
 ### Kotlin
-[22-1-Kotlin]: kotlin/src/main/kotlin/Day1.kt
-[22-2-Kotlin]: kotlin/src/main/kotlin/Day2.kt
-[22-3-Kotlin]: kotlin/src/main/kotlin/Day3.kt
-[22-4-Kotlin]: kotlin/src/main/kotlin/Day4.kt
-[22-5-Kotlin]: kotlin/src/main/kotlin/Day5.kt
+[22-1-Kotlin]: kotlin/2022/src/main/kotlin/Day1.kt
+[22-2-Kotlin]: kotlin/2022/src/main/kotlin/Day2.kt
+[22-3-Kotlin]: kotlin/2022/src/main/kotlin/Day3.kt
+[22-4-Kotlin]: kotlin/2022/src/main/kotlin/Day4.kt
+[22-5-Kotlin]: kotlin/2022/src/main/kotlin/Day5.kt
 
 |          |          |          |          |          |          |          |
 | -------: | -------: | -------: | -------: | -------: | -------: | -------: |
 |          |          |          | **[1][22-1-Kotlin]** | **[2][22-2-Kotlin]** | **[3][22-3-Kotlin]** | **[4][22-4-Kotlin]** |
 | **[5][22-5-Kotlin]** | ~~6~~ | ~~7~~ | ~~8~~ | ~~9~~ | ~~10~~ | ~~11~~ |
+| ~~12~~ | ~~13~~ | ~~14~~ | ~~15~~ | ~~16~~ | ~~17~~ | ~~18~~ |
+| ~~19~~ | ~~20~~ | ~~21~~ | ~~22~~ | ~~23~~ | ~~24~~ | ~~25~~ |
+
+### Haskell
+[22-1-Haskell]: haskell/2022/src/day01.hs
+[22-2-Haskell]: haskell/2022/src/day02.hs
+[22-3-Haskell]: haskell/2022/src/day03.hs
+[22-4-Haskell]: haskell/2022/src/day04.hs
+[22-5-Haskell]: haskell/2022/src/day05.hs
+
+|          |          |          |          |          |          |          |
+| -------: | -------: | -------: | -------: | -------: | -------: | -------: |
+|          |          |          | **[1][22-1-Haskell]** | **[2][22-2-Haskell]** | **[3][22-3-Haskell]** | **[4][22-4-Haskell]** |
+| **[5][22-5-Haskell]** | ~~6~~ | ~~7~~ | ~~8~~ | ~~9~~ | ~~10~~ | ~~11~~ |
 | ~~12~~ | ~~13~~ | ~~14~~ | ~~15~~ | ~~16~~ | ~~17~~ | ~~18~~ |
 | ~~19~~ | ~~20~~ | ~~21~~ | ~~22~~ | ~~23~~ | ~~24~~ | ~~25~~ |
 
