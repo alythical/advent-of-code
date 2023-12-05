@@ -17,10 +17,11 @@ My solutions for [Advent of Code](https://adventofcode.com/about), an Advent cal
 | ~~12~~ | ~~13~~ | ~~14~~ | ~~15~~ | ~~16~~ | ~~17~~ | ~~18~~ |
 | ~~19~~ | ~~20~~ | ~~21~~ | ~~22~~ | ~~23~~ | ~~24~~ | ~~25~~ |
 
-
 ## ✨ 2022 ✨
 
-### Rust
+<details>
+  <summary>Rust</summary>
+
 [22-1]: rust/2022/src/solutions/day01.rs
 [22-2]: rust/2022/src/solutions/day02.rs
 [22-3]: rust/2022/src/solutions/day03.rs
@@ -49,8 +50,11 @@ My solutions for [Advent of Code](https://adventofcode.com/about), an Advent cal
 ¹ Solved only P1
 
 ² Assistance for P2
+</details>
 
-### Kotlin
+<details>
+  <summary>Kotlin</summary>
+
 [22-1-Kotlin]: kotlin/2022/src/main/kotlin/Day1.kt
 [22-2-Kotlin]: kotlin/2022/src/main/kotlin/Day2.kt
 [22-3-Kotlin]: kotlin/2022/src/main/kotlin/Day3.kt
@@ -63,8 +67,11 @@ My solutions for [Advent of Code](https://adventofcode.com/about), an Advent cal
 | **[5][22-5-Kotlin]** | ~~6~~ | ~~7~~ | ~~8~~ | ~~9~~ | ~~10~~ | ~~11~~ |
 | ~~12~~ | ~~13~~ | ~~14~~ | ~~15~~ | ~~16~~ | ~~17~~ | ~~18~~ |
 | ~~19~~ | ~~20~~ | ~~21~~ | ~~22~~ | ~~23~~ | ~~24~~ | ~~25~~ |
+</details>
 
-### Haskell
+<details>
+  <summary>Haskell</summary>
+  
 [22-1-Haskell]: haskell/2022/src/day01.hs
 [22-2-Haskell]: haskell/2022/src/day02.hs
 [22-3-Haskell]: haskell/2022/src/day03.hs
@@ -77,8 +84,12 @@ My solutions for [Advent of Code](https://adventofcode.com/about), an Advent cal
 | **[5][22-5-Haskell]** | ~~6~~ | ~~7~~ | ~~8~~ | ~~9~~ | ~~10~~ | ~~11~~ |
 | ~~12~~ | ~~13~~ | ~~14~~ | ~~15~~ | ~~16~~ | ~~17~~ | ~~18~~ |
 | ~~19~~ | ~~20~~ | ~~21~~ | ~~22~~ | ~~23~~ | ~~24~~ | ~~25~~ |
+</details>
 
 ## ✨ 2021 ✨
+
+<details>
+  <summary>Rust</summary>
 
 [21-15]: rust/2021/src/solutions/day15.rs
 
@@ -88,3 +99,4 @@ My solutions for [Advent of Code](https://adventofcode.com/about), an Advent cal
 | ~~5~~ | ~~6~~ | ~~7~~ | ~~8~~ | ~~9~~ | ~~10~~ | ~~11~~ |
 | ~~12~~ | ~~13~~ | ~~14~~ | **[15][21-15]** | ~~16~~ | ~~17~~ | ~~18~~ |
 | ~~19~~ | ~~20~~ | ~~21~~ | ~~22~~ | ~~23~~ | ~~24~~ | ~~25~~ |
+</details>
