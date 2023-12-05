@@ -19,10 +19,7 @@ struct Seeds;
 
 impl Seeds {
     fn individuals(seeds: &str) -> impl IntoIterator<Item = usize> + '_ {
-        seeds
-            .split(' ')
-            .skip(1)
-            .map(|n| n.parse::<usize>().unwrap())
+        seeds.split(' ').skip(1).map(|n| n.parse().unwrap())
     }
 
     fn ranges(ranges: &str) -> Vec<Range<usize>> {
