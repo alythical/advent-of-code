@@ -73,13 +73,7 @@ pub fn solve(input: &str) -> (usize, usize) {
     // No, I don't care
     let second = Seeds::ranges(seeds)
         .into_par_iter()
-        .map(|seeds| {
-            seeds
-                .into_par_iter()
-                .map(|seed| map.process(seed))
-                .min()
-                .unwrap()
-        })
+        .flat_map(|seeds| seeds.into_par_iter().map(|seed| map.process(seed)))
         .min()
         .unwrap();
     (first, second)
