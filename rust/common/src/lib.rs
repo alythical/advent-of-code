@@ -1,4 +1,5 @@
 pub use criterion::{black_box, criterion_group, criterion_main, Criterion};
+pub use num;
 pub use regex;
 
 pub mod graph;
